@@ -1,6 +1,7 @@
-import Link from "next/link";
 import Logo from "./Logo";
 import CustomLink from "./CustomLink";
+import { GithubLogo, LinkDinIcon, TwitterIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -14,22 +15,47 @@ const Navbar = () => {
       <div className="absolute bottom-3 left-[50%] translate-x-[-50%]">
         <Logo />
       </div>
-      <nav>
-        <Link href="/" target={"_blank"}>
-          Twitter
-        </Link>
-        <Link href="/" target={"_blank"}>
-          Twitter
-        </Link>
-        <Link href="/" target={"_blank"}>
-          Twitter
-        </Link>
-        <Link href="/" target={"_blank"}>
-          Twitter
-        </Link>
-        <Link href="/" target={"_blank"}>
-          Twitter
-        </Link>
+      <nav className="flex justify-center items-center gap-3">
+        <motion.a
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://twitter.com"
+          target={"_blank"}
+        >
+          <TwitterIcon />
+        </motion.a>
+        <motion.a
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://linkdin.com"
+          target={"_blank"}
+        >
+          <LinkDinIcon />
+        </motion.a>
+        <motion.a
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://twitter.com"
+          target={"_blank"}
+        >
+          <GithubLogo />
+        </motion.a>
+        <motion.a
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://twitter.com"
+          target={"_blank"}
+        >
+          <LinkDinIcon />
+        </motion.a>
+        <motion.a
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://twitter.com"
+          target={"_blank"}
+        >
+          <TwitterIcon />
+        </motion.a>
       </nav>
     </header>
   );

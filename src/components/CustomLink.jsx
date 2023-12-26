@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
-  console.log(router);
   return (
     <Link href={href} className={`mx-4 relative group ${className}`}>
       {title}
