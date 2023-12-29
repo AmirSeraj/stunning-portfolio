@@ -1,5 +1,8 @@
+import AnimatedNumbers from "@/components/AnimatedNumbers";
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -14,7 +17,9 @@ const About = () => {
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-5">
           <AnimatedText text="Passion Fuels Purpose!" />
-          <div className="grid w-full grid-cols-8 gap-16">
+
+
+          <div className="grid w-full grid-cols-8 gap-16 my-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biography
@@ -53,27 +58,31 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-left justify-around text-xl">
               <div>
                 <span className="font-bold text-5xl">
-                  50+
+                  <AnimatedNumbers value={50} />+
                 </span>
                 <h2 className="capitalize text-dark/75 font-medium">satisfied clients</h2>
               </div>
 
               <div>
                 <span className="font-bold text-5xl">
-                  40+
+                  <AnimatedNumbers value={40} />+
                 </span>
                 <h2 className="capitalize text-dark/75 font-medium">projects completed</h2>
               </div>
 
               <div>
                 <span className="font-bold text-5xl">
-                  4+
+                  <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="capitalize text-dark/75 font-medium">years of eperience</h2>
               </div>
             </div>
 
           </div>
+
+          <Skills />
+          <Experience />
+          
         </Layout>
       </main>
     </>

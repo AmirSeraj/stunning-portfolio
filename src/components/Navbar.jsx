@@ -11,6 +11,7 @@ const Navbar = () => {
         <CustomLink href="/about" title="About" />
         <CustomLink href="/projects" title="Projects" />
         <CustomLink href="/articles" title="Articles" />
+        <CustomLink href="/slider" title="Slider" />
       </nav>
       <div className="absolute bottom-3 left-[50%] translate-x-[-50%]">
         <Logo />
